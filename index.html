@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Mumma ❤</title>
+  <style>
+    * { box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #2b2e4a, #53354a, #903749);
+      color: #fff;
+      overflow: hidden;
+    }
+    .page {
+      display: none;
+      height: 100vh;
+      width: 100vw;
+      padding: 40px 25px;
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
+    .page.active { display: block; }
+    h1 { font-size: 2.4rem; margin-top: 10vh; animation: fadeUp 2s ease; }
+    p { font-size: 1.25rem; max-width: 800px; margin: 18px auto; animation: fadeUp 2.5s ease; }
+    button {
+      margin-top: 30px;
+      padding: 14px 34px;
+      font-size: 1.05rem;
+      border: none;
+      border-radius: 30px;
+      background: #ff4b5c;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      animation: pulse 2s infinite;
+    }
+    img {
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #fff;
+      margin-top: 20px;
+      animation: fadeUp 2s ease;
+    }
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(25px);} to { opacity:1; transform:none;} }
+    @keyframes pulse { 0%,100%{transform:scale(1);}50%{transform:scale(1.05);} }
+    .cake { font-size: 80px; animation: bounce 2s infinite; }
+    @keyframes bounce { 0%,100%{transform:translateY(0);}50%{transform:translateY(-15px);} }
+    .diya { font-size: 50px; margin-top: 20px; animation: flicker 1.5s infinite; }
+    @keyframes flicker { 0%,100%{opacity:1;}50%{opacity:0.7;} }
+    .flower { position:absolute; top:-10vh; animation: fall 8s linear infinite; font-size:22px; }
+    @keyframes fall { to { transform: translateY(110vh) rotate(360deg);} }
+  </style>
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Page 1 -->
+<div class="page active" id="page1">
+  <h1>मेरी प्यारी मम्मा ❤</h1>
+  <p>
+    मम्मा, आज का दिन मेरे लिए बहुत खास है क्योंकि आज उस इंसान का जन्मदिन है
+    जिसने मुझे चलना सिखाया, गिरने पर उठाया और हर हाल में मेरा साथ दिया।
+  </p>
+  <p>
+    ये छोटा सा सरप्राइज आपके लिए है —
+    क्योंकि आप मेरी ज़िंदगी की सबसे खूबसूरत कहानी हैं।
+  </p>
+  <p>
+    नीचे वाले बटन पर क्लिक कीजिए…
+    एक मुस्कान के साथ 😊
+  </p>
+  <button onclick="nextPage(1)">सरप्राइज खोलो ❤</button>
+</div>
+
+<!-- Page 2 -->
+<div class="page" id="page2">
+  <h1>थोड़ा सा इंतज़ार…</h1>
+  <p>
+    मम्मा, आपकी ममता के बिना ये दुनिया बहुत सूनी होती।
+    आपने बिना कुछ कहे, हर दर्द सहा और हमेशा मेरी खुशी को पहले रखा।
+  </p>
+  <p>
+    जब भी मैं थका, आपने मुझे संभाला।
+    जब भी मैं हारा, आपने मुझे हिम्मत दी।
+  </p>
+  <p>
+    आज मैं शब्दों में वो सब नहीं कह सकता,
+    लेकिन मेरा दिल सब महसूस करता है ❤
+  </p>
+  <button onclick="nextPage(2)">अब असली सरप्राइज ❤</button>
+</div>
+
+<!-- Page 3 -->
+<div class="page" id="page3">
+  <h1>🎉 जन्मदिन मुबारक हो मम्मा 🎂❤</h1>
+  <div class="cake">🎂</div>
+  <img src="mumma.jpg" alt="Mumma Photo" />
+  <p>
+    मम्मा, आप मेरी ज़िंदगी की सबसे बड़ी ताक़त हैं।
+    आपके बिना मैं कुछ भी नहीं हूँ।
+  </p>
+  <p>
+    आपके हर त्याग, हर दुआ, हर आशीर्वाद के लिए
+    मैं दिल से आपका धन्यवाद करता हूँ।
+  </p>
+  <p>
+    भगवान आपको लंबी उम्र, अच्छा स्वास्थ्य
+    और हमेशा खुशियाँ दें।
+  </p>
+  <button onclick="nextPage(3)">एक और खास चीज़ देखें ❤</button>
+</div>
+
+<!-- Page 4 -->
+<div class="page" id="page4">
+  <h1>💖 एक बहुत ही खास बात 💖</h1>
+  <div class="diya">🪔</div>
+  <p>
+    मम्मा, ये सिर्फ़ जन्मदिन का संदेश नहीं है,
+    ये मेरे दिल की हर उस भावना का इज़हार है
+    जो मैं रोज़ शब्दों में नहीं कह पाता।
+  </p>
+  <p>
+    आप मेरी पहली गुरु हैं,
+    मेरी सबसे बड़ी ताक़त हैं,
+    और मेरी हर दुआ की वजह हैं।
+  </p>
+  <p style="font-size:1.6rem; margin-top:25px;">
+    ❤️ हमेशा आपका बेटा – अनंत प्यार के साथ ❤️
+  </p>
+</div>
+
+<div class="hearts" id="hearts"></div>
+<div id="confettiContainer"></div>
+
+<script>
+  function nextPage(n) {
+    document.getElementById('page' + n).classList.remove('active');
+    document.getElementById('page' + (n + 1)).classList.add('active');
+    if (n === 1) document.getElementById('bgMusic').play();
+    if (n === 2) startConfetti();
+  }
+
+  // Floating hearts
+  const hearts = document.getElementById('hearts');
+  setInterval(() => {
+    const heart = document.createElement('span');
+    heart.innerHTML = '❤';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+    heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+    hearts.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+  }, 300);
+
+  // Confetti
+  function startConfetti() {
+    const container = document.getElementById('confettiContainer');
+    for (let i = 0; i < 120; i++) {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+      confetti.style.animationDuration = (Math.random() * 3 + 3) + 's';
+      container.appendChild(confetti);
+      setTimeout(() => confetti.remove(), 6000);
+    }
+  }
+</script>
+
+</body>
+</html>
